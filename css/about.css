@@ -1,0 +1,75 @@
+
+.qna .section_title,
+.portfolio .section_title{
+  margin-bottom: var(--base);
+}
+.qna .section_desc,
+.portfolio .section_desc{
+  margin-bottom: calc(var(--base) * 2);
+}
+
+/*
+li마다 간격 1px
+li div 마다 내부 여백 20 - 안보이도록
+li.active 있으면 li div보이도록 
+h3
+배경높이 지정
+좌우 배치
+화살표는 투명도 0.5
+*/
+.qna_list {
+  width: 750px;
+  margin: 0 auto;
+}
+.qna_list li {
+  
+  margin-bottom: 1px;
+  
+}
+.qna_list li:last-child { 
+  margin-bottom: 0;
+}
+.qna_list li h3 { 
+  background: var(--light-grey);
+  height: calc(var(--base) * 2); 
+  /* 54px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.qna_list h3 span {
+  opacity: 0.5;
+}
+.qna_list li div {
+  padding: 20px;
+  display: none;
+  
+}
+.qna_list li.active div { 
+  display: block;
+}
+.qna_list li.active h3 {
+  font-weight: bold;
+}
+.qna_list li span { 
+  transition: 0.4s;
+  
+}
+.qna_list li.active span { 
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.portfolio_list figcaption {
+  max-width: 632px;
+  width: 90%;
+  margin: var(--base) auto 0;
+  text-align: center ;
+}
+
+.portfolio_list figcaption p { 
+  margin-bottom: var(--base);
+}
+ 
+  

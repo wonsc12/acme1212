@@ -1,0 +1,292 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+/*
+ Variables
+*/
+:root {
+  --banner-c : #3A99D8;
+  --white: #fff;
+  --banner-bg : #2D3D4F;
+  --body-text : #2c2c2c;
+  --highlight : #9AC75B;
+  --light-grey:#ebebeb;
+  --light-blue:#439CCF;
+  --medium-gray:#A8A8A8;
+  --cta-bg: #292C2E;
+  
+  --base:27px;
+  --font:1rem;
+  --container:1272px;
+}
+/*
+Typography
+*/
+
+input, button{
+  outline: none;
+}
+body{
+  font:var(--font)/var(--base) 'open sans', sans-serif;
+  color: var(--body-text);
+}
+.banner_title{
+  font-size: calc(var(--base) * 2);
+  line-height: calc(var(--base) * 2);
+  letter-spacing: 2.5px;
+  color: var(--banner-c);
+  text-transform: uppercase;
+  /* 대문자 */
+}
+.section_title {
+  font-weight: 300;
+  font-size: calc(var(--font) * 2 );text-align: center;
+}
+.section_desc{
+  font-weight: 300;
+  font-size: calc(var(--font) * 1.125);
+  text-align: center;
+  
+}
+.highlight{
+  color: var(--highlight);
+}
+a.highlight{
+  color:var(--highlight);
+  text-decoration: underline;
+}
+.btn.highlight_bg{
+  background: var(--highlight);
+  color: #55762c;
+}
+/* Link */
+.btn{
+  background: var(--light-grey);
+  color: #55762c;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: calc(var(--font) * 0.875);
+  height:39px;
+  color: #6E6E6E;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap:10px;
+  /* 안에 아이콘 가운데 */
+}
+.btn.big{
+  padding: 0 30px;
+  height: calc(var(--base) * 2);
+}
+
+/*
+Link Button
+*/
+
+/*
+Colors
+*
+
+/*
+Layout
+*/
+.container {
+  width: var(--container);
+  margin: 0 auto;
+  
+  
+}
+.sec_pd{
+  padding: calc(var(--base) * 3) 16px;
+}
+.d_flex { 
+  display: flex;}
+.aic{
+  align-items: center;
+}
+.jcc{
+  justify-content: center;
+}
+.jcsb{
+  justify-content: space-between;
+}
+.hidden { 
+  position: absolute;
+  top:0;
+  left: -9999em;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+hr { 
+  border: none;
+  /* border-top: 1px solid var(--medium-gray); */
+  height: 1px;
+  background: var(--medium-gray);
+}
+
+/* header */
+
+/* 
+내부여백확인
+그림자
+로고,nav 좌우배치
+로고 - IR기법 -text-indent
+메뉴 가로배치 */
+header {
+  padding: var(--base) 0;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+  background: #fff;
+}
+
+/* .logo a{
+  background: url(../images/logo.png)no-repeat;
+  text-indent: -9999em; 
+  width: 161px;
+  height:54px ;
+  display: block;
+} */
+.logo a span:last-child{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+.main_menu { 
+  font-size: calc(var(--font) * 0.875);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header nav { 
+  
+  gap:50px;
+}
+nav ul { 
+  
+  gap:10px;
+}
+nav ul li { 
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+
+  /* 
+  slideshow
+  */
+  .slidewrapper { 
+    overflow: hidden;
+    position: relative;
+    
+   }
+
+  .slidecontainer { 
+    
+    display: flex;
+    transition:transform 0.4s;
+    
+    
+    
+    
+    
+  }
+  .slidecontainer > li { 
+    width: var(--container);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:var(--base);
+    
+  }
+
+
+  .slidewrapper .controls button { 
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: var(--light-grey);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    /* 손가락표시 */
+  }
+  .slidewrapper .controls button span {
+    font-size: 36px;
+    vertical-align: top;
+  }
+  .slidewrapper .controls .prev{
+    left: 0;
+  }
+  .slidewrapper .controls .next{
+   right: 0;
+  }
+
+
+
+  /* 
+  CTA
+   */
+
+   .cta {
+    text-align: center;
+    background: var(--cta-bg);
+   }
+
+   .cta .section_title{
+    margin-bottom: var(--base);
+    color: var(--white);
+   }
+   .cta .section_desc{
+    margin-bottom:calc(var(--base) * 2); 
+    color: var(--medium-gray);
+   }
+
+   /* copyright */
+   .copyright {
+    text-align: center;
+   }
+   .copyright p + p{
+    margin-top: var(--base);
+    
+   }
+   #btt {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+    position: fixed;
+    right: 50px; 
+    bottom: 50px;
+    /* 우측에서50px 하단에서 50px 위치에 고정 */
+    box-shadow: 0 0 5px rgba(255,255,255,.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    
+   }
+   #btt.active {
+    opacity: 1;
+    visibility: visible;
+   }
+
+   /* Banner */
+
+   .banner { 
+  
+    text-align: center;
+    
+    background: var(--banner-bg);
+    text-align: center;
+  }
+
+
+
